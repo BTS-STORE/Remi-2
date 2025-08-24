@@ -17,38 +17,38 @@
 <body class="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 min-h-screen">
     <!-- Header -->
     <div class="bg-white/10 backdrop-blur-md border-b border-white/20">
-        <div class="max-w-6xl mx-auto px-4 py-6">
-            <div class="flex justify-between items-center">
+        <div class="max-w-6xl mx-auto px-3 py-4">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                 <div>
-                    <h1 class="text-3xl font-bold text-white flex items-center gap-3">
+                    <h1 class="text-xl sm:text-3xl font-bold text-white flex items-center gap-2">
                         🃏 Penghitung Poin Remi
                     </h1>
-                    <p class="text-white/60 text-sm mt-1">BY <span class="text-white font-medium">Irsan R</span></p>
+                    <p class="text-white/60 text-xs sm:text-sm mt-1">BY <span class="text-white font-medium">Irsan R</span></p>
                 </div>
-                <div class="flex gap-3 flex-wrap">
-                    <button onclick="showAddPlayerModal()" class="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl">
-                        + Tambah Pemain
+                <div class="flex gap-2 flex-wrap w-full sm:w-auto">
+                    <button onclick="showAddPlayerModal()" class="bg-emerald-500 hover:bg-emerald-600 text-white px-3 py-2 text-sm rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl flex-1 sm:flex-none">
+                        + Tambah
                     </button>
-                    <button onclick="exportData()" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl">
-                        📤 Ekspor Data
+                    <button onclick="exportData()" class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 text-sm rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl flex-1 sm:flex-none">
+                        📤 Ekspor
                     </button>
-                    <button onclick="showImportModal()" class="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl">
-                        📥 Impor Data
+                    <button onclick="showImportModal()" class="bg-purple-500 hover:bg-purple-600 text-white px-3 py-2 text-sm rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl flex-1 sm:flex-none">
+                        📥 Impor
                     </button>
-                    <button onclick="showResetModal()" class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl">
-                        🔄 Reset Permainan
+                    <button onclick="showResetModal()" class="bg-red-500 hover:bg-red-600 text-white px-3 py-2 text-sm rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl flex-1 sm:flex-none">
+                        🔄 Reset
                     </button>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="max-w-6xl mx-auto px-4 py-8">
-        <div class="grid lg:grid-cols-3 gap-8">
+    <div class="max-w-6xl mx-auto px-3 py-4">
+        <div class="grid lg:grid-cols-3 gap-4">
             <!-- Daftar Pemain -->
             <div class="lg:col-span-2">
-                <div class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 shadow-2xl">
-                    <h2 class="text-2xl font-semibold text-white mb-6 flex items-center gap-2">
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-4 shadow-2xl">
+                    <h2 class="text-lg sm:text-2xl font-semibold text-white mb-4 flex items-center gap-2">
                         👥 Daftar Pemain
                     </h2>
                     <div id="playersList" class="space-y-4">
@@ -63,11 +63,11 @@
 
             <!-- Riwayat Poin -->
             <div class="lg:col-span-1">
-                <div class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 shadow-2xl">
-                    <h2 class="text-2xl font-semibold text-white mb-6 flex items-center gap-2">
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-4 shadow-2xl">
+                    <h2 class="text-lg sm:text-2xl font-semibold text-white mb-4 flex items-center gap-2">
                         📊 Riwayat Poin
                     </h2>
-                    <div id="historyList" class="space-y-3 max-h-96 overflow-y-auto">
+                    <div id="historyList" class="space-y-3 max-h-64 sm:max-h-96 overflow-y-auto">
                         <div class="text-center py-8 text-white/60">
                             <div class="text-4xl mb-2">📝</div>
                             <p>Belum ada riwayat</p>
@@ -80,7 +80,7 @@
 
     <!-- Modal Tambah Pemain -->
     <div id="addPlayerModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50">
-        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl slide-up">
+        <div class="bg-white rounded-2xl p-6 max-w-md w-full mx-3 shadow-2xl slide-up">
             <h3 class="text-2xl font-bold text-gray-800 mb-6">Tambah Pemain Baru</h3>
             <input type="text" id="playerNameInput" placeholder="Nama pemain..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none text-lg">
             <div class="flex gap-3 mt-6">
@@ -96,7 +96,7 @@
 
     <!-- Modal Reset -->
     <div id="resetModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50">
-        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl slide-up">
+        <div class="bg-white rounded-2xl p-6 max-w-md w-full mx-3 shadow-2xl slide-up">
             <div class="text-center">
                 <div class="text-6xl mb-4">⚠️</div>
                 <h3 class="text-2xl font-bold text-gray-800 mb-4">Reset Permainan?</h3>
@@ -115,7 +115,7 @@
 
     <!-- Modal Edit Pemain -->
     <div id="editPlayerModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50">
-        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl slide-up">
+        <div class="bg-white rounded-2xl p-6 max-w-md w-full mx-3 shadow-2xl slide-up">
             <h3 class="text-2xl font-bold text-gray-800 mb-6">Edit Nama Pemain</h3>
             <input type="text" id="editPlayerNameInput" placeholder="Nama pemain..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none text-lg">
             <div class="flex gap-3 mt-6">
@@ -133,7 +133,7 @@
 
     <!-- Modal Impor Data -->
     <div id="importModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50">
-        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl slide-up">
+        <div class="bg-white rounded-2xl p-6 max-w-md w-full mx-3 shadow-2xl slide-up">
             <h3 class="text-2xl font-bold text-gray-800 mb-6">Impor Data</h3>
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm font-medium mb-2">Pilih file data (.json):</label>
@@ -152,7 +152,7 @@
 
     <!-- Modal Riwayat Pemain -->
     <div id="playerHistoryModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50">
-        <div class="bg-white rounded-2xl p-8 max-w-lg w-full mx-4 shadow-2xl slide-up max-h-[80vh] overflow-hidden flex flex-col">
+        <div class="bg-white rounded-2xl p-6 max-w-lg w-full mx-3 shadow-2xl slide-up max-h-[80vh] overflow-hidden flex flex-col">
             <div class="flex items-center justify-between mb-6">
                 <h3 id="playerHistoryTitle" class="text-2xl font-bold text-gray-800">Riwayat Pemain</h3>
                 <button onclick="hidePlayerHistoryModal()" class="text-gray-500 hover:text-gray-700 text-2xl">×</button>
@@ -471,42 +471,42 @@
             playersList.innerHTML = sortedPlayers.map((player, index) => {
                 const rankEmoji = index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : '👤';
                 return `
-                    <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6 border border-white/30 fade-in">
-                        <div class="flex items-center justify-between mb-4">
+                    <div class="bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-white/30 fade-in">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 gap-3">
                             <div class="flex items-center gap-3">
-                                <span class="text-2xl">${rankEmoji}</span>
+                                <span class="text-xl sm:text-2xl">${rankEmoji}</span>
                                 <div>
-                                    <h3 class="text-xl font-semibold text-white">${player.name}</h3>
-                                    <p class="text-white/70">Peringkat ${index + 1}</p>
+                                    <h3 class="text-lg sm:text-xl font-semibold text-white">${player.name}</h3>
+                                    <p class="text-white/70 text-sm">Peringkat ${index + 1}</p>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-3">
-                                <button onclick="showPlayerHistory(${player.id})" class="text-white/70 hover:text-white transition-colors p-2" title="Lihat Riwayat">
+                            <div class="flex items-center gap-2">
+                                <button onclick="showPlayerHistory(${player.id})" class="text-white/70 hover:text-white transition-colors p-2 text-sm" title="Lihat Riwayat">
                                     📊
                                 </button>
-                                <button onclick="showEditPlayerModal(${player.id})" class="text-white/70 hover:text-white transition-colors p-2" title="Edit Nama">
+                                <button onclick="showEditPlayerModal(${player.id})" class="text-white/70 hover:text-white transition-colors p-2 text-sm" title="Edit Nama">
                                     ✏️
                                 </button>
-                                <button onclick="deletePlayer(${player.id})" class="text-red-400 hover:text-red-300 transition-colors p-2" title="Hapus Pemain">
+                                <button onclick="deletePlayer(${player.id})" class="text-red-400 hover:text-red-300 transition-colors p-2 text-sm" title="Hapus Pemain">
                                     🗑️
                                 </button>
                             </div>
                         </div>
                         
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-3">
-                                <button onclick="subtractPoints(${player.id})" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl">
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div class="flex items-center gap-2 w-full sm:w-auto">
+                                <button onclick="subtractPoints(${player.id})" class="bg-red-500 hover:bg-red-600 text-white px-3 py-2 text-sm rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl flex-1 sm:flex-none">
                                     - Kurang
                                 </button>
-                                <input type="number" id="pointInput_${player.id}" placeholder="0" min="1" class="w-20 px-3 py-2 border border-white/30 rounded-lg bg-white/20 text-white text-center placeholder-white/50 focus:ring-2 focus:ring-white/50 focus:border-transparent outline-none">
-                                <button onclick="addPoints(${player.id})" class="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl">
+                                <input type="number" id="pointInput_${player.id}" placeholder="0" min="1" class="w-16 px-2 py-2 border border-white/30 rounded-lg bg-white/20 text-white text-center placeholder-white/50 focus:ring-2 focus:ring-white/50 focus:border-transparent outline-none text-sm">
+                                <button onclick="addPoints(${player.id})" class="bg-emerald-500 hover:bg-emerald-600 text-white px-3 py-2 text-sm rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl flex-1 sm:flex-none">
                                     + Tambah
                                 </button>
                             </div>
                             
-                            <div class="text-center bg-white/10 rounded-xl p-4 min-w-[120px]">
-                                <div class="text-6xl font-bold text-white mb-1">${player.score}</div>
-                                <div class="text-white/70 text-base font-medium">POIN</div>
+                            <div class="text-center bg-white/10 rounded-xl p-3 min-w-[100px] sm:min-w-[120px]">
+                                <div class="text-4xl sm:text-6xl font-bold text-white mb-1">${player.score}</div>
+                                <div class="text-white/70 text-sm sm:text-base font-medium">POIN</div>
                             </div>
                         </div>
                     </div>
@@ -579,5 +579,5 @@
         renderPlayers();
         renderHistory();
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'974466ae07cb7b39',t:'MTc1NjA1NDc3Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9744700874c36198',t:'MTc1NjA1NTE1OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
